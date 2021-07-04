@@ -1,22 +1,16 @@
 {
-  "name": "multi-tenant-node-app",
+  "name": "multitenant-app",
   "version": "1.0.0",
-  "description": "Multi-Tenant Node App",
+  "description": "Multi-Tenant App",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "test": "mocha"
-  },
+    "start": "nodemon ./bin/www"  },
   "keywords": [
     "Multi-tenant",
     "Boilerplate"
   ],
-  "author": "daniccan",
+  "author": "diego",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/daniccan/multi-tenant-node-app/issues"
-  },
-  "homepage": "https://github.com/daniccan/multi-tenant-node-app#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
