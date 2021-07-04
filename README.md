@@ -45,10 +45,10 @@ X-TENANT-ID: <Tenant ID>
 {
   "name": "Alphabet",
   "domain": "alphabet.com",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@alphabet.com",
-  "password": "5f4dcc3b5aa765d61d8327deb882cf99"
+  "firstName": "Diego",
+  "lastName": "Arevalo",
+  "email": "diego2000avelar@gmail.com",
+  "password": "123456"
 }
 ```
 
@@ -58,8 +58,8 @@ X-TENANT-ID: <Tenant ID>
 
 ```
 {
-  "email": "johndoe@google.com",
-  "password": "5f4dcc3b5aa765d61d8327deb882cf99"
+  "email": "diego2000avelar@gmail.com",
+  "password": "123456"
 }
 ```
 
@@ -90,10 +90,10 @@ X-TENANT-ID: <Tenant ID>
 
 ```
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@google.com",
-  "password": "5f4dcc3b5aa765d61d8327deb882cf99"
+  "firstName": "devs",
+  "lastName": "soft",
+  "email": "johndoe@gmail.com",
+  "password": "123456"
 }
 ```
 
