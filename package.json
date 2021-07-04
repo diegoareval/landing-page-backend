@@ -4,7 +4,8 @@
   "description": "Multi-Tenant App",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www"  },
+    "start": "nodemon ./bin/www"
+  },
   "keywords": [
     "Multi-tenant",
     "Boilerplate"
