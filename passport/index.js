@@ -7,7 +7,7 @@ const LocalStrategy = require('passport-local').Strategy;
 
 const dbRepo = require('../models');
 
-const common = require('../src/utils/common');
+let dbKey = 'default';
 
 passport.use(new LocalStrategy(
   {
@@ -16,7 +16,6 @@ passport.use(new LocalStrategy(
     passReqToCallback: true
   },
   async function(request, email, password, done) {
-    let dbKey = await common.getDBKeyFromRequest(request);
     const User = dbRepo[dbKey].User;
     return User.findOne({ where: { email: email, password: password }, attributes: { exclude: ['password'] } })
       .then(user => {
@@ -35,7 +34,6 @@ passport.use(new JWTStrategy(
     passReqToCallback: true
   }, 
   async function (request, jwtPayload, done) {  
-    let dbKey = await common.getDBKeyFromRequest(request);
     const User = dbRepo[dbKey].User;
     return User.findByPk(jwtPayload.id)
       .then(user => {

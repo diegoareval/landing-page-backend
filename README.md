@@ -31,12 +31,6 @@ npm start
 Authorization: Bearer <JWT Token>
 ```
 
-* For APIs other than `Signup`, pass the `Tenant ID` in the `X-TENANT-ID` custom header of the request.
-
-```
-X-TENANT-ID: <Tenant ID>
-```
-
 ### Signup
 
 * POST `/api/v1/accounts/signup`
@@ -48,7 +42,8 @@ X-TENANT-ID: <Tenant ID>
   "firstName": "Diego",
   "lastName": "Arevalo",
   "email": "diego2000avelar@gmail.com",
-  "password": "123456"
+  "password": "123456",
+  "address": "your address"
 }
 ```
 

@@ -1,12 +1,10 @@
 const organizationService = require('./organization_service');
 const responder = require('../utils/responder');
-const common = require('../utils/common');
-
+let dbKey = 'default';
 let OrganizationController = {
 
   getOrganizations: async (request, response, next) => {
     try {
-      let dbKey = await common.getDBKeyFromRequest(request);
       let organizations = await organizationService.getOrganizations(dbKey);
       responder.sendResponse(response, 200, "success", organizations, "Organizations retrieved successfully.");
     } catch (error) {
@@ -16,7 +14,6 @@ let OrganizationController = {
 
   getOrganization: async (request, response, next) => {
     try {
-      let dbKey = await common.getDBKeyFromRequest(request);
       let organizationId = request.params.organizationId;
       let organization = await organizationService.getOrganization(organizationId, dbKey);
       responder.sendResponse(response, 200, "success", organization, "Organization retrieved successfully.");
@@ -27,7 +24,6 @@ let OrganizationController = {
 
   createOrganization: async (request, response, next) => {
     try {
-      let dbKey = await common.getDBKeyFromRequest(request);
       let body = request.body;
       let organization = await organizationService.createOrganization(body, dbKey);
       responder.sendResponse(response, 200, "success", organization, "Organization created successfully.");
@@ -38,7 +34,6 @@ let OrganizationController = {
 
   updateOrganization: async (request, response, next) => {
     try {
-      let dbKey = await common.getDBKeyFromRequest(request);
       let organization = await organizationService.updateOrganization(dbKey);
       response.status(200).json({
         status: "success",
@@ -52,7 +47,6 @@ let OrganizationController = {
 
   deleteOrganization: async (request, response, next) => {
     try {
-      let dbKey = await common.getDBKeyFromRequest(request);
       let organizationId = request.params.organizationId;
       let organization = await organizationService.deleteOrganization(organizationId, dbKey);
       responder.sendResponse(response, 200, "success", organization, "Organization deleted successfully.");

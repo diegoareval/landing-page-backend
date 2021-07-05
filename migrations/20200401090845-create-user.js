@@ -25,9 +25,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      isSuperAdmin: {
-        defautValue: false,
-        type: Sequelize.BOOLEAN
+      address: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       OrganizationId: {
         references: {

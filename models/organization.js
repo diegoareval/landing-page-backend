@@ -10,6 +10,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
+    },
+    employeesNumber: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    industry: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   }, {});
   Organization.associate = function(models) {

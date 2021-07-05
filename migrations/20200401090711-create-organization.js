@@ -18,6 +18,18 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING
       },
+    employeesNumber: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
+    location: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
+    industry: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

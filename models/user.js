@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    isSuperAdmin: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
+    address: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   }, {});
   User.associate = function(models) {

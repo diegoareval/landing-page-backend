@@ -1,14 +1,14 @@
 {
-  "name": "multitenant-app",
+  "name": "market-house",
   "version": "1.0.0",
-  "description": "Multi-Tenant App",
+  "description": "House Marketplace",
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
   "keywords": [
-    "Multi-tenant",
-    "Boilerplate"
+    "node",
+    "postgress"
   ],
   "author": "diego",
   "license": "ISC",
