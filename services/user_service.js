@@ -1,4 +1,4 @@
-const userDataProvider = require('./user_dataprovider');
+const userDataProvider = require('../providers/user_dataprovider');
 
 let UserService = {
 

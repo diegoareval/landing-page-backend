@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../../config/config.json')[env];
-const modelsDir = path.resolve(__dirname + '/../../models');
+const config = require('../config/config.json')[env];
+const modelsDir = path.resolve(__dirname + '/../models');
 
 let DBConnector = {
 

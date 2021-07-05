@@ -1,4 +1,4 @@
-const dbRepo = require('../../models');
+const dbRepo = require('../models');
 
 let UserDataProvider = {
 

@@ -1,4 +1,4 @@
-const signupService = require('./signup_service');
+const signupService = require('../services/signup_service');
 const responder = require('../utils/responder');
 
 let SignupController = {

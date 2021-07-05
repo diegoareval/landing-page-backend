@@ -1,4 +1,4 @@
-const userDataProvider = require('../user/user_dataprovider');
+const userDataProvider = require('../providers/user_dataprovider');
 const logger = require('../utils/logger');
 
 let SignupService = {

@@ -1,5 +1,5 @@
 'use strict';
-const dbConnector = require('../src/utils/dbconnector');
+const dbConnector = require('../utils/dbconnector');
 
 let dbRepo = {};
 

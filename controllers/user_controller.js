@@ -1,4 +1,4 @@
-const userService = require('./user_service');
+const userService = require('../services/user_service');
 const responder = require('../utils/responder');
 let dbKey = 'default';
 let UserController = {

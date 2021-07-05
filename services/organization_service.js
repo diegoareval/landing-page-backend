@@ -1,4 +1,4 @@
-const organizationDataProvider = require('./organization_dataprovider');
+const organizationDataProvider = require('../providers/organization_dataprovider');
 
 let OrganizationService = {
 

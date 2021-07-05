@@ -1,4 +1,4 @@
-const organizationService = require('./organization_service');
+const organizationService = require('../services/organization_service');
 const responder = require('../utils/responder');
 let dbKey = 'default';
 let OrganizationController = {
