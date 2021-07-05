@@ -1,5 +1,5 @@
-# multi-tenant-node-app
-it is a way to connect a single project with different databases, to have so many clients in a single project
+# house-market
+it is a way to sell or rent your house or differents properties you have.
 ## What is this?
 
 This is a proof-of-concept (POC), multi-tenant [RESTful Web Services](https://restfulapi.net/) application built on top of [NodeJS](https://nodejs.org/en/).
