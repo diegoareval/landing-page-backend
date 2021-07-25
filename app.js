@@ -6,6 +6,7 @@ const signupRouter = require('./routes/signup');
 const authRouter = require('./routes/auth');
 const userRouter = require('./routes/user');
 const faqRouter = require('./routes/faq');
+const settingRouter = require('./routes/setting');
 const passport = require('passport');
 require('./passport');
 
@@ -35,6 +36,7 @@ app.use(function (req, res, next) {
 app.use('/api/v1/accounts/signup', signupRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/faq', faqRouter);
+app.use('/api/v1/setting', settingRouter);
 app.use('/api/v1/users', passport.authenticate('jwt', {session: false}), userRouter);
 
 // catch 404 and forward to error handler
@@ -45,6 +47,7 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
   // render the error page
+  console.log(err);
   res.status(err.status || 500);
   res.json({
     status: 'error',

@@ -29,15 +29,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      OrganizationId: {
-        references: {
-          model: 'Organizations',
-          key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
