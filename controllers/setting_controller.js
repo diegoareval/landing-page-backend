@@ -1,6 +1,6 @@
 const settingService = require('../services/setting_service');
 const responder = require('../utils/responder');
-let dbKey = 'default';
+const {dbKey} = require('../utils/constants')
 let SettingController = {
 
   getSetting: async (_, response, next) => {
