@@ -36,6 +36,11 @@ module.exports = {
         allowNull: true,
         type: Sequelize.TEXT
       },
+      seen: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       ProjectId: {
         references: {
           model: 'Projects',
