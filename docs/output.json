@@ -1,0 +1,459 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Landing Page API",
+      "description": "Documentation sample Node js with Swagger and Swagger-Autogen"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "General",
+        "description": "Endpoints"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "securityDefinitions": {
+      "apiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-KEY",
+        "description": "any description..."
+      }
+    },
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/api/v1/contact/": {
+        "get": {
+          "tags": ["contact"],
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/api/v1/contact": {
+        "post": {
+          "tags": ["contact"],
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": "Created"
+            }
+          }
+        }
+      },
+      "/api/v1/contact/{contactId}": {
+        "put": {
+          "tags": [],
+          "description": "",
+          "parameters": [
+            {
+              "name": "contactId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            }
+          }
+        }
+      },
+      "api/v1/auth/login": {
+        "post": {
+          "tags": [
+            "User"
+          ],
+          "description": "Endpoint to sign in a specific user",
+          "parameters": [
+            {
+              "name": "obj",
+              "in": "body",
+              "description": "User information.",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/AddUser"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created"
+            }
+          },
+          "security": [
+            {
+              "apiKeyAuth": []
+            }
+          ]
+        }
+      },
+      "/api/v1/accounts/signup": {
+        "post": {
+          "tags": [
+            "User"
+          ],
+          "description": "Endpoint to create an user.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "User registered successfully.",
+              "schema": {
+                "$ref": "#/definitions/User"
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/v1/setting": {
+        "post": {
+          "tags": [
+            "Setting"
+          ],
+          "description": "Endpoint to create an Setting.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "User registered successfully.",
+              "schema": {
+                "$ref": "#/definitions/User"
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/v1/setting/": {
+        "get": {
+          "tags": [
+            "Setting"
+          ],
+          "description": "Endpoint to get the Setting.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Setting get successfully.",
+              "schema": {
+                "$ref": "#/definitions/Setting"
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/v1/faq/": {
+        "get": {
+          "tags": [
+            "Faq"
+          ],
+          "description": "Endpoint to get the faqs.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Faq get successfully.",
+              "schema": {
+                "$ref": "#/definitions/Faq"
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/v1/faq/{faqId}": {
+        "delete": {
+          "tags": [ "Faq"],
+          "description": "",
+          "parameters": [
+            {
+              "name": "faqId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            }
+          }
+        }
+      },
+      "/api/v1/faq": {
+        "post": {
+          "tags": [
+            "Faq"
+          ],
+          "description": "Endpoint to create the faqs.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Faq get successfully.",
+              "schema": {
+                "$ref": "#/definitions/Faq"
+              }
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          }
+        }
+      },
+      "/api/v1/project/": {
+        "get": {
+          "tags": [
+            "Project"
+          ],
+          "description": "Endpoint to get projects.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Projects get successfully.",
+              "schema": {
+                "$ref": "#/definitions/Project"
+              }
+            },
+            "401": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/api/v1/project/{projectId}": {
+        "get": {
+          "tags": [ "Project"],
+          "description": "",
+          "parameters": [
+            {
+              "name": "projectId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            }
+          }
+        }
+      },
+      "/api/v1/project": {
+        "post": {
+          "tags": [
+            "Project"
+          ],
+          "description": "Endpoint to create projects.",
+          "parameters": [
+          ],
+          "responses": {
+            "200": {
+              "description": "Projects create successfully.",
+              "schema": {
+                "$ref": "#/definitions/Project"
+              }
+            },
+            "401": {
+              "description": "Success"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "User": {
+        "type": "object",
+        "properties": {
+            "name": {
+              "type": "string",
+              "example": "Jhon Doe"
+            },
+            "email": {
+              "type": "string",
+              "example": "diego@gmail.com"
+            },
+            "message": {
+              "type": "string",
+              "example": "test message"
+            },
+            "type": {
+              "type": "string",
+              "example": "test message"
+            },
+            "bookDate": {
+              "type": "date",
+              "example": "2020-1-10"
+            },
+            "description": {
+              "type": "string",
+              "example": "test description"
+            },
+            "seen": {
+              "type": "boolean",
+              "example": false
+            }
+          }
+      },
+      "Faq": {
+        "type": "object",
+        "properties": {
+            "question": {
+              "type": "string",
+              "example": "what is this?"
+            },
+            "answer": {
+              "type": "string",
+              "example": "this is a question"
+            }
+          }
+      },
+      "Image": {
+        "type": "object",
+        "properties": {
+            "image_url": {
+              "type": "string",
+              "example": "www.imgur.com"
+            }
+          }
+      },
+      "Setting": {
+        "type": "object",
+        "properties": {
+            "company_name": {
+              "type": "string",
+              "example": "Jhon Doe"
+            },
+            "logo_url": {
+              "type": "string",
+              "example": "diego@gmail.com"
+            },
+            "company_email": {
+              "type": "string",
+              "example": "test message"
+            },
+            "address": {
+              "type": "string",
+              "example": "test message"
+            },
+            "codigo_postal": {
+              "type": "string",
+              "example": "0401"
+            },
+            "facebook_url": {
+              "type": "string",
+              "example": "test description"
+            },
+            "instagram_url": {
+              "type": "string",
+              "example": ""
+            },
+            "twitter_url": {
+                "type": "string",
+                "example": ""
+              },
+              "description": {
+                "type": "string",
+                "example": ""
+              },
+              "us_title": {
+                "type": "string",
+                "example": ""
+              },
+              "us_description": {
+                "type": "string",
+                "example": ""
+              },
+              "us_image": {
+                "type": "string",
+                "example": ""
+              },
+              "main_title": {
+                "type": "string",
+                "example": ""
+              },
+              "main_subtitle": {
+                "type": "string",
+                "example": ""
+              },
+              "wp_message": {
+                "type": "string",
+                "example": ""
+              }
+          }
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+            "thumbnailSrc": {
+              "type": "string",
+              "example": "Jhon Doe"
+            },
+            "main_image": {
+              "type": "string",
+              "example": "web.com"
+            },
+            "title": {
+              "type": "string",
+              "example": "test message"
+            },
+            "description": {
+              "type": "string",
+              "example": "test message"
+            },
+            "monthlyPrice": {
+              "type": "string",
+              "example": "12.56"
+            },
+            "totalPrice": {
+              "type": "string",
+              "example": "100.00"
+            },
+            "area": {
+              "type": "string",
+              "example": ""
+            },
+            "type": {
+                "type": "string",
+                "example": ""
+              },
+              "flag": {
+                "type": "string",
+                "example": ""
+              }
+          }
+      }
+    }
+  }
